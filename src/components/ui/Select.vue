@@ -26,6 +26,6 @@ const { id, options, modelValue } = defineProps({
 <style lang="postcss" scoped>
 select,
 option {
-    @apply w-full pt-3 pb-2 px-4 outline-none bg-transparent transition-all border rounded-md border-slate-400 focus:border-slate-600;
+    @apply w-full py-2 px-4 outline-none bg-transparent transition-all border rounded-md border-slate-400 focus:border-slate-600;
 }
 </style>

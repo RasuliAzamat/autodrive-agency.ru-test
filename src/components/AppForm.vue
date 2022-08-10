@@ -21,7 +21,7 @@
 
             <div class="field-4">
                 <label for="city">Город*</label>
-                <UiSelect id="city" defaultText="Москва" :options="options" v-model="cityModel" />
+                <UiSelect id="city" :options="options" v-model="cityModel" />
             </div>
 
             <div class="button">
@@ -44,6 +44,12 @@ import UiSelect from "@/components/ui/Select.vue";
 
 const store = useStore();
 const emit = defineEmits(["formSended", "sendedStatus"]);
+const { options } = defineProps({
+    options: {
+        type: Array,
+        required: true
+    }
+})
 
 const nameModel = ref("");
 const emailModel = ref("");
@@ -65,21 +71,6 @@ const formSubmit = async () => {
         emit('formSended')
     }
 };
-
-const options = ref([
-    {
-        id: 1,
-        name: "Москва",
-    },
-    {
-        id: 2,
-        name: "Санкт-Петербург",
-    },
-    {
-        id: 3,
-        name: "Казань",
-    },
-]);
 </script>
 
 <style lang="postcss" scoped>

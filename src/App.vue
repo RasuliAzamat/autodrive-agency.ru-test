@@ -22,7 +22,7 @@
                             Вернуться на главную
                         </a>
                     </div>
-                    <AppForm v-else @formSended="formSended = true" @sendedStatus="sendSuccessfully = false" />
+                    <AppForm v-else :options="cities" @formSended="formSended = true" @sendedStatus="sendSuccessfully = false" />
                 </UiModal>
             </Transition>
         </teleport>
@@ -42,6 +42,21 @@ const store = useStore();
 const modalVisible = ref(false);
 const formSended = ref(false);
 const sendSuccessfully = ref(true);
+
+const cities = ref([
+    {
+        id: 1,
+        name: "Москва",
+    },
+    {
+        id: 2,
+        name: "Санкт-Петербург",
+    },
+    {
+        id: 3,
+        name: "Казань",
+    },
+]);
 </script>
 
 <style lang="css" scoped>

@@ -7,9 +7,7 @@ class HTTPService {
 
     async postData(data) {
         try {
-            const{ data: call } = await axios.post(this.url, data)
-
-            return call
+            await axios.post(this.url, data)
         } catch (error) {
             throw error
         }
