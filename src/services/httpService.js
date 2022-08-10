@@ -7,7 +7,7 @@ class HTTPService {
 
     async postData(data) {
         try {
-            const{ data: call } = await axios.post(`${this.url}/calls.json`, data)
+            const{ data: call } = await axios.post(this.url, data)
 
             return call
         } catch (error) {
@@ -17,5 +17,5 @@ class HTTPService {
 }
 
 export const httpService = new HTTPService(
-    'https://modal-aa646-default-rtdb.firebaseio.com'
+    'http://hh.autodrive-agency.ru/test-tasks/front/task-7/'
 )

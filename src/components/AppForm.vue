@@ -1,6 +1,6 @@
 <template>
     <form @submit.prevent="formSubmit">
-        <h1 class="mb-5 font-medium">Заказать звонок</h1>
+        <h1 class="mb-6 font-medium">Заказать звонок</h1>
 
         <div class="form-container">
             <div class="field-1">
